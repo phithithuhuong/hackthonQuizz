@@ -11,8 +11,8 @@ import Footer from "../menu/footer";
 function Home() {
     return (
         <>
-            <Register/>
-            {/*<Login/>*/}
+            {/*<Register/>*/}
+            <Login/>
 
             <Container>
                 <Navbars/>
