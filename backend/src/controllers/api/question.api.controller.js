@@ -19,13 +19,13 @@ class QuestionApiController {
             let categoryId = category_id;
 
             for (let i = 0; i < questions.length; i++) {
-                let newQuestion = await prisma.Question.create({
+                let newQuestion = await prisma.question.create({
                     data: {
                         question: questions[i].question,
                         content: questions[i].content,
                         correct: questions[i].correct,
-                        category_id: questions[i].categoryId,
-                    }
+                        category_id: categoryId,
+                    } 
                 })
 
                 res.status(200).json({ message: 'Question created successfully', data: newQuestion })
