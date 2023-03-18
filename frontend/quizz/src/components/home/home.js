@@ -12,14 +12,14 @@ function Home() {
     return (
         <>
             {/*<Register/>*/}
-            <Login/>
+            {/*<Login/>*/}
 
             <Container>
                 <Navbars/>
                 <Row>
-                    {/*<Col md={12}>*/}
-                    {/*    <img src="https://sites.create-cdn.net/siteimages/1/4/3/14310/logos/807401.gif"/>*/}
-                    {/*</Col>*/}
+                    <Col md={12}>
+                        <img style={{width:1115}} src="https://kenh14cdn.com/thumb_w/640/2016/cover-quizz-1458020660190.jpg"/>
+                    </Col>
 
                 </Row>
                 <Row>
@@ -107,5 +107,4 @@ function Home() {
         </>
     );
 }
-
 export default Home;
