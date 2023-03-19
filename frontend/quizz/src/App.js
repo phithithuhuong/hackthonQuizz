@@ -11,6 +11,7 @@ import Register from "./components/info/register";
 import Form from "./components/show/form";
 import Start from "./components/timer/start";
 import GameShow from "./components/show/game-show";
+import Question from "./components/question/Question";
 function App() {
     return (
         <div>
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/form" element={<Form/>} />
                 <Route path="/start" element={<Start/>} />
                 <Route path="/play" element={<GameShow/>} />
+                <Route path="/question" element={<Question/>} />
             </Routes>
 
         </div>

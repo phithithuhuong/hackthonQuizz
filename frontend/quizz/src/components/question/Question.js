@@ -16,15 +16,20 @@ const Question = (props) => {
             }, 2000)
         } else {
             setGameEnd(true,
-            alert('sai, cmnr'));
+            alert('Bạn đã điền sai kết quả, hãy chơi lại !'));
+
             setQuestion(0)
         }
     }
     return (
         <>
             <center>
-                <div style={{width:1110, height:200,background:'lemonchiffon',marginTop: 150}}>
-                        <div style={{ color: "white",height:50, background :'blueviolet'}}>
+
+                <div style={{width:1110, height:220,background:'lemonchiffon',marginTop:80}}>
+                    <div>
+                        <p style={{textAlign: "right",background:'white'}}>00:30</p>
+                    </div>
+                        <div style={{ color: "white",height:35,background :'blueviolet'}}>
                             {questions[question].question}
                         </div>
                     <Contents question={questions[question]} answerSelect={answerSelect} handleSelect={(data) => handleSelect(data)}/>
