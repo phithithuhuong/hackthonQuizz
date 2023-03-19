@@ -34,7 +34,7 @@ function Home() {
                     </Col>
                 </Row>
                 <Row style={{marginTop: 50}}>
-                    <h2 style={{color:'blueviolet',textAlign:'center'}}>Vui lòng chọn thể loại yêu thích để chơi </h2>
+                    <h2 style={{color:'blueviolet',textAlign:'center'}}>Chọn thể loại yêu thích để chơi </h2>
                 </Row>
                 <Row style={{marginTop: 50}}>
                     <Col md={12}>
@@ -43,12 +43,12 @@ function Home() {
                 <Row style={{margin:15,textAlign:'center'}}>
                     {jsonData.map(item => (
                     <Col md={4} >
-                        <Card style={{ width:'18rem', border:'4px solid blueviolet',background:'lemonchiffon'  }}>
+                        <Card style={{ width:'18rem', border:'4px solid blueviolet',background:'lemonchiffon'}}>
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
                                 <Card.Text>
                                 </Card.Text>
-                                <Link to="/start">  <Button variant="warning">Vào trong</Button></Link>
+                                <Link to="/start">  <Button variant="warning">Vào trong</Button> </Link>
                     </Card.Body>
                         </Card>
                     </Col>
@@ -83,7 +83,6 @@ function Home() {
                         <Card.Body>
                             <Card.Title>Chính trị</Card.Title>
                             <Card.Text>
-
                             </Card.Text>
                               <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                         </Card.Body>

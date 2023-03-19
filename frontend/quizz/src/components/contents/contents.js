@@ -22,6 +22,7 @@ const Contents = (props) => {
     let [randomSecond, setRandomSecond] = useState();
     const [showButton, setShowButton] = useState(true);
     function handleDataChange(data) {
+        console.log(data);
         fiftyFiftyGenerator(props.question.correct)
     }
     const randomNumHelperFunc = num => Math.floor(Math.random() * num);

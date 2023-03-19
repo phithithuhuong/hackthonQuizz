@@ -30,7 +30,7 @@ const Question = (props) => {
             setAnswerSelect(data);
 
             setTimeout(() => {
-                setAnswerSelect(0)
+                setAnswerSelect(null)
                 setQuestion(question + 1);
 
                 const randomNumHelperFunc = num => Math.floor(Math.random() * num);
@@ -47,7 +47,7 @@ const Question = (props) => {
             <center>
                 <div style={{width:1110, height:220,background:'lemonchiffon',marginTop:80}}>
                     <div>
-                        <p style={{textAlign: "right",background:'white'}}>00:30</p>
+                        {/* <p style={{textAlign: "right",background:'white'}}>00:30</p> */}
                     </div>
                         <div style={{ color: "white",height:35,background :'blueviolet'}}>
                             {questions[question].question}

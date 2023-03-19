@@ -70,21 +70,21 @@ export default function Footer() {
                         </MDBCol>
 
                         <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4' style={{color: 'blueviolet'}}>Công cụ</h6>
+                            <h6 className='text-uppercase fw-bold mb-4' style={{color: 'blueviolet'}}>Nhóm Phát Triển</h6>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Hưng
+                                    Nguyễn Khắc Bảo Hưng
 
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Hường
+                                    Phí Thị Thu Hường
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Phước
+                                    Mai Bảo Phước
                                 </a>
                             </p>
                             <p>
@@ -118,7 +118,7 @@ export default function Footer() {
             <div className='text-center p-4' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
                 © 2023 Copyright:
                 <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-                    riddle.com
+                    CODEGYM.VN
                 </a>
             </div>
         </MDBFooter>

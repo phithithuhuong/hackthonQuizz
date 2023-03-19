@@ -21,13 +21,13 @@ function Nav() {
 
                 <Navbar.Brand href="#home">
 
-                    <Link>  <Button variant="warning" >Dừng lại </Button></Link>
+                    {/* <Link>  <Button variant="warning" >Dừng lại </Button></Link> */}
 
                 </Navbar.Brand>
 
                 <Navbar.Brand href="#home">
 
-                    <small> Điểm : <smaill style={{color:"red"}}>500</smaill></small>
+                    {/* <small> Điểm : <smaill style={{color:"red"}}>500</smaill></small> */}
 
                 </Navbar.Brand>
 

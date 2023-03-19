@@ -15,7 +15,7 @@ function Help(props){
         handleChange()
     }
     return(
-        <div style={{top: '2%',left: '75%', position: 'fixed'}}>
+        <div style={{top: '5%',left: '75%', position: 'fixed'}}>
             {props.showBtn && <button className="btn btn-3" onClick={functionParent} style={{color:'white',background:'black'}}>50:50</button>}
         </div>
     )

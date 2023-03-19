@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Timer = (props) => {
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
-    const [second, setSecond] = useState(120);
+    const [second, setSecond] = useState(60);
     const handleShowModal = () => {
         setShowModal(true);
     };
@@ -45,9 +45,10 @@ const Timer = (props) => {
                 style={{
                     color: 'black',
                     position: 'fixed',
-                    top: '15%'
+                    top: '15%',
+                    left:'10%'
                 }}
-            >{second}</h1>
+            >{second}:sec</h1>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Hết giờ</Modal.Title>

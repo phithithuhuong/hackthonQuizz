@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import react, { useState, useEffect } from 'react';
 import Question from '../question/Question.js';
 import Rankingg from '../rankcomponent/rankcomponent.js';
 import Timer from '../timer/timer';
@@ -11,13 +11,13 @@ import Footer from "../menu/footer";
 
 const Game = () => {
     const [game, setGame] = useState(false);
+    
     const playSound = () => {
         const sound = new Audio('././sound/intro.mp3');
         sound.play();
     };
     const handleGame = () => {
         setGame(!game);
-        playSound();
     }
     const handleSecond = (data) => {
         console.log(data);
@@ -27,15 +27,16 @@ const Game = () => {
         handleGame();
     };
 
+
     if (game) {
         return (
             <>
                 <Container>
                     <Nav />
-                    <button
+                    <Button variant="warning" 
                         onClick={handleGame}
                         style={{ top: '10%', position: 'fixed' }}
-                    >{game ? 'STOP' : 'START'}</button>
+                    >{game ? 'STOP' : 'START'}</Button>
                     <Row style={{marginTop: 50}}>
                         <Col md={12}>
                 <Timer key={game} handleSecond={(data) => handleSecond(data)} timerStart={game} onData={dataRestartGame}/>
@@ -54,9 +55,9 @@ const Game = () => {
             <>
                 <Button variant="warning"
                     onClick={handleGame}
-                    style={{ top: '6%',left: '21%', position: 'fixed' }}
+                    style={{ top: '5%',left: '21%', position: 'fixed' }}
                 >{game ? 'STOP' : 'START'}</Button>
-                <Timer key={game} handleSecond={(data) => handleSecond(data)} timerStart={game} onData={dataRestartGame}/>
+                <Timer  key={game} handleSecond={(data) => handleSecond(data)} timerStart={game} onData={dataRestartGame}/>
                 <Question
                     gameStatus={game} onData={dataRestartGame}
                 />

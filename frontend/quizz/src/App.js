@@ -13,6 +13,7 @@ import Start from "./components/timer/start";
 import GameShow from "./components/show/game-show";
 import { RequireAuth } from 'react-auth-kit'
 import { AuthProvider } from 'react-auth-kit'
+import Game from './components/game/game';
 
 function App() {
   return (
@@ -31,8 +32,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/form" element={<Form />} />
-          {/*<Route path="/start" element={<Start/>} />*/}
-          <Route path="/play" element={<GameShow />} />
+          <Route path="/start" element={<Start/>} />
+          <Route path="/play" element={<Game/>} />
         </Routes>
       {/* </AuthProvider> */}
     </div>
