@@ -24,8 +24,6 @@ function Start() {
                                              <Link to={'/play'}>   <Button variant="warning" style={{height:50}} >   Bắt đầu chơi  </Button></Link>
                                         </center>
                                     </div>
-
-
                                 </Col>
                             </Row>
                         </div>
@@ -34,7 +32,6 @@ function Start() {
                 <Row style={{marginTop: 50}}>
                     <Col md={12}>
                     </Col>
-
                 </Row>
                 <Footer/>
             </Container>
