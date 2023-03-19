@@ -17,9 +17,9 @@ class QuestionApiController {
             }
 
             let categoryId = category_id;
-let newQuestion
+            let newQuestion;
             for (let i = 0; i < questions.length; i++) {
-                 newQuestion = await prisma.question.create({
+                newQuestion = await prisma.question.create({
                     data: {
                         question: questions[i].question,
                         content: questions[i].content,

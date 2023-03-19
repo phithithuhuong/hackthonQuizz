@@ -11,23 +11,32 @@ import Register from "./components/info/register";
 import Form from "./components/show/form";
 import Start from "./components/timer/start";
 import GameShow from "./components/show/game-show";
-import Question from "./components/question/Question";
-function App() {
-    return (
-        <div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/game" element={<Frame/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/register" element={<Register/>} />
-                <Route path="/form" element={<Form/>} />
-                <Route path="/start" element={<Start/>} />
-                <Route path="/play" element={<GameShow/>} />
-                <Route path="/question" element={<Question/>} />
-            </Routes>
+import { RequireAuth } from 'react-auth-kit'
+import { AuthProvider } from 'react-auth-kit'
 
-        </div>
-    )
+function App() {
+  return (
+    <div>
+      {/* <AuthProvider authType={'cookie'}
+        authName={'authorization'}
+        cookieDomain={window.location.hostname}
+        cookieSecure={false}> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/game" element={
+            <RequireAuth>
+              <Frame />
+            </RequireAuth>
+          } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/form" element={<Form />} />
+          {/*<Route path="/start" element={<Start/>} />*/}
+          <Route path="/play" element={<GameShow />} />
+        </Routes>
+      {/* </AuthProvider> */}
+    </div>
+  )
 }
 
 export default App;

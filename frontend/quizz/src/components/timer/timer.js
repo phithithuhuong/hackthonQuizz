@@ -1,9 +1,14 @@
 import react, { useEffect, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import Home from "../home/home";
+import {Route, Routes} from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Timer = (props) => {
+    const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
-    const [second, setSecond] = useState(500);
+    const [second, setSecond] = useState(120);
     const handleShowModal = () => {
         setShowModal(true);
     };
@@ -12,6 +17,9 @@ const Timer = (props) => {
     };
     const restartGame = () => {
         props.onData("Data use restartgame");
+    };
+    const handleGoHome = () => {
+        navigate("/");
     };
     useEffect(() => {
         console.log(second);
@@ -42,7 +50,7 @@ const Timer = (props) => {
             >{second}</h1>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Thông báo</Modal.Title>
+                    <Modal.Title>Hết giờ</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     Bạn đã thua rồi!
@@ -51,8 +59,8 @@ const Timer = (props) => {
                     <Button variant="secondary" onClick={restartGame}>
                         Chơi Lại
                     </Button>
-                    <Button variant="secondary" onClick={handleCloseModal}>
-                        Đóng
+                    <Button variant="secondary" onClick={handleGoHome}>
+                        Chọn Bộ Câu Hỏi khác
                     </Button>
                 </Modal.Footer>
             </Modal>
