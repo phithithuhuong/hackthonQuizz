@@ -32,6 +32,7 @@ class CategoryApiController {
                 question: true,
             }
         })
+        res.status(200).json({message: 'Success', data: category})
     }
 }
 
