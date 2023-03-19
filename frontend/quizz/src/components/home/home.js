@@ -23,7 +23,7 @@ function Home() {
                     </Col>
                 </Row>
                 <Row style={{marginTop: 50}}>
-                    <h2 style={{color:'blueviolet',textAlign:'center'}}> Các thể loại vui lòng chọn để chơi </h2>
+                    <h2 style={{color:'blueviolet',textAlign:'center'}}>Vui lòng chọn thể loại yêu thích để chơi </h2>
                 </Row>
                 <Row style={{marginTop: 50}}>
                     <Col md={12}>
@@ -31,15 +31,15 @@ function Home() {
                 </Row>
                 <Row style={{margin:15,textAlign:'center'}}>
                     <Col md={4} >
-                        <Card style={{ width:'18rem', border:'5px solid blueviolet',background:'lemonchiffon'  }}>
+                        <Card style={{ width:'18rem', border:'4px solid blueviolet',background:'lemonchiffon'  }}>
 
                             <Card.Body>
                                 <Card.Title>Hack não</Card.Title>
                                 <Card.Text>
 
                                 </Card.Text>
-                                <Button variant="warning"> <Link to="/start">Bắt đầu</Link> </Button>
-                            </Card.Body>
+                                <Link to="/start">  <Button variant="warning">Vào trong</Button></Link>
+                    </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4} >
@@ -50,7 +50,7 @@ function Home() {
                                 <Card.Text>
 
                                 </Card.Text>
-                                <Button variant="warning">Bắt đầu</Button>
+                                <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -62,7 +62,7 @@ function Home() {
                                 <Card.Text>
 
                                 </Card.Text>
-                                <Button variant="warning">Bắt đầu</Button>
+                                  <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -76,7 +76,7 @@ function Home() {
                                 <Card.Text>
 
                                 </Card.Text>
-                                <Button variant="warning">Bắt đầu</Button>
+                                  <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -88,7 +88,7 @@ function Home() {
                                 <Card.Text>
 
                                 </Card.Text>
-                                <Button variant="warning">Bắt đầu</Button>
+                                  <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                             </Card.Body>
                         </Card>
                     </Col><Col md={4} >
@@ -99,7 +99,7 @@ function Home() {
                             <Card.Text>
 
                             </Card.Text>
-                            <Button variant="warning">Bắt đầu</Button>
+                              <Link to={'/start'}> <Button variant="warning">Vào trong</Button> </Link>
                         </Card.Body>
                     </Card>
                 </Col>

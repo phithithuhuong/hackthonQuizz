@@ -47,7 +47,7 @@ function Register() {
 
             <div className="text-center">
                 <p> <Link to={'/login'} > Quay lại đăng nhâp </Link></p>
-                <div className='d-flex justify-content-between mx-auto' style={{ width: '40%' }}>
+                <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
                         <MDBIcon fab icon='facebook-f' size="sm" />
                     </MDBBtn>
