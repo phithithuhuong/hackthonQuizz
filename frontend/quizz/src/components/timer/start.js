@@ -35,7 +35,6 @@ function Start() {
                 <Row style={{marginTop: 50}}>
                     <Col md={12}>
                     </Col>
-
                 </Row>
                 <Footer/>
             </Container>

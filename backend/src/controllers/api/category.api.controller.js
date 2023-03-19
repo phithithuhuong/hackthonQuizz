@@ -34,6 +34,23 @@ class CategoryApiController {
         })
         res.status(200).json({message: 'Success', data: category})
     }
+
+    readAll = async (req, res) => {
+        try {
+            let categories = await prisma.category.findMany({
+                include: {
+                    question: true,
+                }
+            });
+            if (categories) {
+                res.status(200).json({message: 'oke', data: categories})
+            } else {
+                res.status(500).json({message: 'something goes wrong'})
+            }
+        } catch (error) {
+            console.log('error at category.api.controoler (readAll)')
+        }
+    }
 }
 
 export default new CategoryApiController();
