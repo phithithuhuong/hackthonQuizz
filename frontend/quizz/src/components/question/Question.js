@@ -6,8 +6,6 @@ import {Button, Modal} from "react-bootstrap";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Question = (props) => {
     let [answerSelect, setAnswerSelect] = useState();
     let [question, setQuestion] = useState(0);
@@ -55,27 +53,36 @@ const Question = (props) => {
     }
     return (
         <>
-            <div style={{ color: "white" }}>
-                {questions[question].question}
-            </div>
-            <Contents question={questions[question]} answerSelect={answerSelect} handleSelect={(data) => handleSelect(data)} />
-            <Rankingg />
-            <Modal show={showModal} onHide={handleCloseModal} backdrop="static">
-                <Modal.Header closeButton={false}>
-                    <Modal.Title>Đán Án Sai</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    Bạn đã thua rồi!
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={restartGame}>
-                        Chơi Lại
-                    </Button>
-                    <Button variant="secondary" onClick={handleGoHome}>
-                        Chọn Bộ Câu Hỏi khác
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <center>
+                <div style={{width:1110, height:200,background:'lemonchiffon',marginTop: 150}}>
+                        <div style={{ color: "white",height:50, background :'blueviolet'}}>
+                            {questions[question].question}
+                        </div>
+                    <Contents question={questions[question]} answerSelect={answerSelect} handleSelect={(data) => handleSelect(data)}/>
+                    {/*<Rankingg />*/}
+                </div>
+                <div style={{ color: "white" }}>
+                    {questions[question].question}
+                </div>
+                <Contents question={questions[question]} answerSelect={answerSelect} handleSelect={(data) => handleSelect(data)} />
+                <Rankingg />
+                <Modal show={showModal} onHide={handleCloseModal} backdrop="static">
+                    <Modal.Header closeButton={false}>
+                        <Modal.Title>Đán Án Sai</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Bạn đã thua rồi!
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={restartGame}>
+                            Chơi Lại
+                        </Button>
+                        <Button variant="secondary" onClick={handleGoHome}>
+                            Chọn Bộ Câu Hỏi khác
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </center>
         </>
     )
 }

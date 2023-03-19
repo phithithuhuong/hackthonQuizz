@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import {MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
 
 export default function Footer() {
     return (
@@ -8,25 +8,24 @@ export default function Footer() {
                 <div className='me-5 d-none d-lg-block'>
                     <span>Kết nối với chúng tôi trên các mạng xã hội:</span>
                 </div>
-
                 <div>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="facebook-f" />
+                        <MDBIcon fab icon="facebook-f"/>
                     </a>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="twitter" />
+                        <MDBIcon fab icon="twitter"/>
                     </a>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="google" />
+                        <MDBIcon fab icon="google"/>
                     </a>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="instagram" />
+                        <MDBIcon fab icon="instagram"/>
                     </a>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="linkedin" />
+                        <MDBIcon fab icon="linkedin"/>
                     </a>
                     <a href='' className='me-4 text-reset'>
-                        <MDBIcon fab icon="github" />
+                        <MDBIcon fab icon="github"/>
                     </a>
                 </div>
             </section>
@@ -35,23 +34,19 @@ export default function Footer() {
                 <MDBContainer className='text-center text-md-start mt-5'>
                     <MDBRow className='mt-3'>
                         <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
-                            <h6 style={{color:'blueviolet'}} className='text-uppercase fw-bold mb-4'>
-                                <MDBIcon icon="gem" className="me-3" />
-                                Company name
+                            <h6 style={{color: 'blueviolet'}} className='text-uppercase fw-bold mb-4'>
+                                <MDBIcon icon="gem" className="me-3"/>
+                                Mô tả dự án
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit.
+                                Dự án này có tên "Ai thông minh hơn học viên CodeGym", mục đích là đưa người dùng một
+                                trải nghiệm hết sức thú vị cũng như mang lại lợi ích cho người dùng như là xả
+                                stress,kích thích não giúp cho thông minh hơn
                             </p>
                         </MDBCol>
 
                         <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                            <h6 style={{color:'blueviolet'}} className='text-uppercase fw-bold mb-4'>Riddle</h6>
-                            <p>
-                                <a href='#!' className='text-reset'>
-                                    Angular
-                                </a>
-                            </p>
+                            <h6 style={{color: 'blueviolet'}} className='text-uppercase fw-bold mb-4'>Công nghệ</h6>
                             <p>
                                 <a href='#!' className='text-reset'>
                                     React
@@ -59,62 +54,68 @@ export default function Footer() {
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Vue
+                                    Express
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Laravel
+                                    NodeJS
+                                </a>
+                            </p>
+                            <p>
+                                <a href='#!' className='text-reset'>
+                                    MonggoDB
                                 </a>
                             </p>
                         </MDBCol>
 
                         <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4' style={{color:'blueviolet'}}>Useful links</h6>
+                            <h6 className='text-uppercase fw-bold mb-4' style={{color: 'blueviolet'}}>Công cụ</h6>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Pricing
+                                    Hưng
+
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Settings
+                                    Hường
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Orders
+                                    Phước
                                 </a>
                             </p>
                             <p>
                                 <a href='#!' className='text-reset'>
-                                    Help
+
                                 </a>
                             </p>
                         </MDBCol>
 
                         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                            <h6 style={{color:'blueviolet'}} className='text-uppercase fw-bold mb-4'>Contact</h6>
+                            <h6 style={{color: 'blueviolet'}} className='text-uppercase fw-bold mb-4'>Thông tin</h6>
                             <p>
-                                <MDBIcon icon="home" className="me-2" />
-                                New York, NY 10012, US
+                                <MDBIcon icon="home" className="me-2"/>
+                                Thanh Xuân, HN 2023, VN
                             </p>
                             <p>
-                                <MDBIcon icon="envelope" className="me-3" />
-                                info@example.com
+                                <MDBIcon icon="envelope" className="me-3"/>
+                               codegym@gmail.com
                             </p>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                                <MDBIcon icon="phone" className="me-3"/> + 01 234 567 88
                             </p>
                             <p>
-                                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+                                <MDBIcon icon="print" className="me-3"/> + 01 234 567 89
                             </p>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
             </section>
 
-            <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+            <div className='text-center p-4' style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
                 © 2023 Copyright:
                 <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
                     riddle.com

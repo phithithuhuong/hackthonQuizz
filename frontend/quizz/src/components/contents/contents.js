@@ -7,11 +7,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const ContentStyles = styled.div`
   .correct-style {
-    background-color: green;
+    background-color: forestgreen;
 
   }
   .incorrect-style {
-    background-color: blue;
+    background-color: aliceblue;
   }
 `
 
@@ -45,17 +45,14 @@ const Contents = (props) => {
                 document.querySelector(`[id='${randomSecond}']`).style.display = "none";
                 document.querySelector(`[id='${randomFirst}']`).style.display = "none";
             }
-
-
-
     };
     return (
         <ContentStyles>
-            <div className="row" style={{marginTop: 50}}>
+            <div className="row" style={{marginTop: 30}}>
                 {props.question.content.map((item, index) => (
                     <div className="col-6">
                         <div style={{margin: 5}}>
-                            <button type="button" id={index} style={{width: 380}} className={`"btn btn-primary btn-lg round " ${props.answerSelect === props.question.correct && props.answerSelect === index?'correct-style':'incorrect-style'}`}>
+                            <button  type="button" id={index} style={{width: 380 ,color:'black'}} className={` ${props.answerSelect === props.question.correct && props.answerSelect === index?'correct-style':'incorrect-style'}`}>
                                 <div key={index}
                                      onClick={() => props.handleSelect(index)}>
                                     {item}
@@ -65,7 +62,7 @@ const Contents = (props) => {
                     </div>
                 ))}
             </div>
-            <p>Data from Child: {datahelp}</p>
+            {/*<p>Data from Child: {datahelp}</p>*/}
             <Help parentCallback={handleDataChange} setShowBtn={setShowButton} showBtn={showButton}/>
         </ContentStyles>
     )
