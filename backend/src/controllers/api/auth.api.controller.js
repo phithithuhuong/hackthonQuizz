@@ -50,7 +50,7 @@ class authApiController {
                         let token = jwt.sign({
                             iss: "Quizz",
                             sub: user._id,
-                            iat: new Date().getTime(),
+                            iat: new Date().getTime(), 
                         },
                             process.env.USER_CODE_SECRET,
                             { expiresIn: 604800000 },
