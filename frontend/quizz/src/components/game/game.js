@@ -5,8 +5,13 @@ import Timer from '../timer/timer';
 
 const Game = () => {
     const [game, setGame] = useState(false);
+    const playSound = () => {
+        const sound = new Audio('././sound/intro.mp3');
+        sound.play();
+    };
     const handleGame = () => {
         setGame(!game);
+        playSound();
     }
     const handleSecond = (data) => {
         console.log(data);
@@ -26,7 +31,7 @@ const Game = () => {
                 <Rankingg />
                 <Timer key={game} handleSecond={(data) => handleSecond(data)} timerStart={game} onData={dataRestartGame}/>
                 <Question
-                    gameStatus={game}
+                    gameStatus={game} onData={dataRestartGame}
                 />
             </>
         )

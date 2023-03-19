@@ -6,13 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ShowAll from "./components/show/show-all";
 import Frame from "./components/frame-component/frame";
 import Home from "./components/home/home";
+import MyComponent from "./components/testcomp/test";
 function App() {
     return (
         <div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/game" element={<Frame/>} />
-            </Routes>
+            {/*<Routes>*/}
+            {/*    <Route path="/home" element={<Home />} />*/}
+            {/*    <Route path="/game" element={<Frame/>} />*/}
+            {/*</Routes>*/}
+            <MyComponent/>
 
         </div>
     )
