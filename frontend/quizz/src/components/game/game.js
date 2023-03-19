@@ -23,7 +23,7 @@ const Game = () => {
                     onClick={handleGame}
                     style={{ top: '10%', position: 'fixed' }}
                 >{game ? 'STOP' : 'START'}</button>
-                <Rankingg />
+                {/*<Rankingg />*/}
                 <Timer key={game} handleSecond={(data) => handleSecond(data)} timerStart={game} onData={dataRestartGame}/>
                 <Question
                     gameStatus={game}
@@ -37,7 +37,7 @@ const Game = () => {
                     onClick={handleGame}
                     style={{ top: '10%', position: 'fixed' }}
                 >{game ? 'STOP' : 'START'}</button>
-                <Rankingg />
+                {/*<Rankingg />*/}
                 <Timer timerStart={game}/>
             </>
         )
