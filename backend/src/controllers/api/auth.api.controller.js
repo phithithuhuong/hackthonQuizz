@@ -22,7 +22,7 @@ class authApiController {
             let newUser = await prisma.user.create({
                 data: { 
                     username: req.body.username,
-                    password: req.body.password,
+                    password,
                 }
             })
             if (newUser) {
@@ -43,14 +43,14 @@ class authApiController {
     login = async (req, res) => {
         try {
             let { username, password } = req.body;
-            let user = await User.findOne({ username: username });
+            let user = await prisma.user.findUnique({where: {username}});
             if (user) {
                 bcrypt.compare(password, user.password, (err, result) => {
                     if (result) {
                         let token = jwt.sign({
                             iss: "Quizz",
                             sub: user._id,
-                            iat: new Date().getTime(),
+                            iat: new Date().getTime(), 
                         },
                             process.env.USER_CODE_SECRET,
                             { expiresIn: 604800000 },

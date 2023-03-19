@@ -10,6 +10,7 @@ apiRouter.post('/auth/login',authApiController.login);
 apiRouter.post('/auth/logout',authApiController.logout);
 
 apiRouter.post('/category', CategoryApiController.create);
+apiRouter.get('/category', CategoryApiController.readAll)
 apiRouter.get('/category/:category_id', CategoryApiController.read);
 
 apiRouter.post('/question', QuestionApiController.create);

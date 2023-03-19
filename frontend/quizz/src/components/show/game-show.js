@@ -8,7 +8,7 @@ function GameShow() {
     return (
         <>
             <Container>
-                <Nav />
+                <Nav/>
                 <Row style={{marginTop: 50}}>
                     <Col md={12}>
                         <Question/>

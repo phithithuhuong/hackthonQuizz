@@ -49,9 +49,9 @@ const Question = (props) => {
                     <div>
                         <p style={{textAlign: "right",background:'white'}}>00:30</p>
                     </div>
-                    <div style={{ color: "white",height:35,background :'blueviolet'}}>
-                        {questions[question].question}
-                    </div>
+                        <div style={{ color: "white",height:35,background :'blueviolet'}}>
+                            {questions[question].question}
+                        </div>
                     <Contents question={questions[question]} answerSelect={answerSelect} handleSelect={(data) => handleSelect(data)}/>
                     {/*<Rankingg />*/}
                     <Modal show={showModal} onHide={handleCloseModal} backdrop="static" style={{height: "50%"}}>

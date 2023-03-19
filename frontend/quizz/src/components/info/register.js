@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { Navigate } from "react-router-dom";
+
 import {
     MDBContainer,
     MDBInput,
@@ -7,43 +11,65 @@ import {
     MDBIcon
 }
     from 'mdb-react-ui-kit';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Register() {
+    const [register, setRegister] = useState(false);
+    const [username, setUsername] = useState();
+    const [password, setPassword] = useState();
+    const [status, setStatus] = useState(false);
+
+    let handleRegister = async () => {
+        let newUser = await axios({
+            method: 'post',
+            url: 'http://localhost:5000/api/auth/register',
+            data: {
+                username,
+                password,
+            }
+        })
+        console.log(newUser);
+        if (newUser) {
+            setStatus(true);
+        } else {
+            console.log('Register error');
+        }
+    };
+
     return (
         <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
-            <label style={{textAlign:"left"}}>Nhập tên </label>
-            <MDBInput wrapperClass='mb-4' id='form1' type='email'/>
-            <label style={{textAlign:"left"}}>Nhập mật khẩu</label>
-            <MDBInput wrapperClass='mb-4' id='form2' type='password'/>
+            <label style={{ textAlign: "left" }}>Nhập tên </label>
+            <MDBInput onChange={e => (setUsername(e.target.value))} wrapperClass='mb-4' id='form1' type='email' />
+            <label style={{ textAlign: "left" }}>Nhập mật khẩu</label>
+            <MDBInput onChange={e => (setPassword(e.target.value))} wrapperClass='mb-4' id='form2' type='password' />
 
-            <div className="d-flex justify-content-between mx-3 mb-4">
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Nhớ thông tin' />
-                <a href="!#">Quên mật khẩu ?</a>
-            </div>
-
-            <MDBBtn style={{background:"blueviolet", height:40}} className="mb-4">Đăng kí</MDBBtn>
+            <MDBBtn onClick={handleRegister} style={{ background: "blueviolet", height: 40 }} className="mb-4">Đăng kí</MDBBtn>
 
             <div className="text-center">
-                <p> <Link to={'/'} > Quay lại đăng nhâp </Link></p>
+                <p> <Link to={'/login'} > Quay lại đăng nhâp </Link></p>
                 <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                        <MDBIcon fab icon='facebook-f' size="sm"/>
+                        <MDBIcon fab icon='facebook-f' size="sm" />
                     </MDBBtn>
 
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                        <MDBIcon fab icon='twitter' size="sm"/>
+                        <MDBIcon fab icon='twitter' size="sm" />
                     </MDBBtn>
 
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                        <MDBIcon fab icon='google' size="sm"/>
+                        <MDBIcon fab icon='google' size="sm" />
                     </MDBBtn>
 
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                        <MDBIcon fab icon='github' size="sm"/>
+                        <MDBIcon fab icon='github' size="sm" />
                     </MDBBtn>
 
                 </div>
+            </div>
+            <div>
+                {status && (
+                    <Navigate to='/login' replace={true}/>
+                )}
             </div>
 
         </MDBContainer>

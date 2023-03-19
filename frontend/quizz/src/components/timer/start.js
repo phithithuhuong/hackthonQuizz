@@ -14,9 +14,12 @@ function Start() {
                             <Row style={{marginTop: 50}}>
                                 <Col md={4}>
                                     <h4 style={{color:'blueviolet'}}>
-                                        Hack não
+                                        Hướng dẫn?
                                     </h4>
-                                   <p> <small>Thể loại câu đố này sẽ thách thức bạn , và khi bạn vượt qua thì bạn sẽ ở ngưỡng  thông minh lắm nhá! Chúc mừng bạn vượt qua </small></p>
+                                    <center>
+                                        <p> <small> Đầu tiên, bạn nhấn vào nút "Bắt đầu chơi", bạn sẽ đọc kĩ câu hỏi và nhấn vào 1 câu đúng nhất.Nếu hiện nút xanh sẽ đúng và đưa ra thông báo là sai ! Chúc bạn may mắn </small></p>
+                                    </center>
+
                                 </Col>
                                 <Col md={8} style={{background:'blueviolet'}} >
                                     <div style={ {margin: 50 }}>
