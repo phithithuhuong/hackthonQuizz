@@ -35,14 +35,11 @@ const Timer = (props) => {
         <>
             <h1
                 style={{
-                    color: 'white',
+                    color: 'black',
                     position: 'fixed',
                     top: '15%'
                 }}
             >{second}</h1>
-            <Button variant="primary" onClick={handleShowModal}>
-                Mở Modal
-            </Button>
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Thông báo</Modal.Title>

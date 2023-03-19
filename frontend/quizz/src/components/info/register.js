@@ -7,6 +7,7 @@ import {
     MDBIcon
 }
     from 'mdb-react-ui-kit';
+import {Link} from "react-router-dom";
 
 function Register() {
     return (
@@ -24,7 +25,7 @@ function Register() {
             <MDBBtn style={{background:"blueviolet", height:40}} className="mb-4">Đăng kí</MDBBtn>
 
             <div className="text-center">
-                <p> <a href="!#">Quay lại đăng nhâp</a> </p>
+                <p> <Link to={'/'} > Quay lại đăng nhâp </Link></p>
                 <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
                     <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
                         <MDBIcon fab icon='facebook-f' size="sm"/>
